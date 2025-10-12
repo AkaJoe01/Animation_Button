@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+</head>
+<body>
+    <button class="hover-button">Hover Me!</button>
+    <br>
+    <div class="box"></div>
+    <br>
+    <div class="ball"></div>
+
+    <style>
+        .hover-button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s ease, transform 0.2s ease-in-out;
+        }
+
+        .hover-button:hover{
+            background-color: #2ecc71;
+            transform: scale(1.1);
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            margin: 50px;
+            transition: width 0.5s ease, height 0.5s ease, background-color 0.3s ease;
+        }
+
+        .box:hover{
+            width: 150px;
+            height: 150px;
+            background-color: #8e44ad;
+        }
+
+        .ball{
+            width: 50px;
+            height: 50px;
+            background-color: #f1c40f;
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 2s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transition: translateY(-50px);
+            }
+        }
+    </style>
+</body>
+</html>
